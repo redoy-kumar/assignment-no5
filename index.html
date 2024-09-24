@@ -27,15 +27,15 @@
 <body class="font-lexend">
 
     <header class="sticky top-0">
-        <div class="bg-[#F9F7F3] py-6">
-            <div class="navbar lg:max-w-[1140px] mx-auto">
+        <div class="bg-[#f9f7f3d6] py-6 backdrop-blur-xl">
+            <div class="navbar max-w-[335px] lg:max-w-[1140px] mx-auto">
                 <div class="navbar-start">
                     <button href="blog.html" class="btn text-[1rem] lg:text-[1.25rem] px-8 py-3 bg-[#B4F461]"><a href="./blog page/blog.html">Blog</a></button>
                 </div>
                 <div class="navbar-center flex">
                     <div class="flex items-center gap-2">
-                        <div><img src="icons/logo.png" alt="coin logo"></div>
-                        <div><span class="text-[1rem] lg:text-[1.25rem] font-semibold">Donate Bangladesh</span></div>
+                        <div><img src="icons/logo.png" width="40px" alt="coin logo"></div>
+                        <div><span class="text-[1rem] lg:text-[1.25rem] hidden lg:block font-semibold">Donate Bangladesh</span></div>
                     </div>
                 </div>
                 <div class="navbar-end">
@@ -49,6 +49,11 @@
         </div>
 
          <!-- Button section -->
+
+         <!-- This is for video for adding a border line below the buttons-->
+         <!-- <div class="pt-16 flex gap-4 justify-center backdrop-blur-xl pb-8 border-b-2 border-solid border-gray-200"> -->
+
+        <!-- This for figma -->
          <div class="pt-16 flex gap-4 justify-center backdrop-blur-xl pb-8">
             <button id="btn-donation" class="btn text-[1rem] lg:text-[1.25rem] px-8 py-3 bg-[#B4F461]">Donation</button>
             <button id="btn-history"
@@ -60,7 +65,7 @@
     <main>
 
         <!-- Donation Section -->
-        <section id="donation-section" class="max-w-[1140px] mx-auto">
+        <section id="donation-section" class="max-w-[335px] lg:max-w-[1140px] mx-auto">
             <!-- Donate Section start -->
             <div class="mt-8 w-full">
                 <div class="w-full p-8 border rounded-lg">
@@ -75,7 +80,7 @@
                             </div>
                             <h4 id="noakhali" class=" text-[1rem] lg:text-[1.25rem] font-bold">Donate for Flood at Noakhali,
                                 Bangladesh</h4>
-                            <p class="text-gray-400">
+                            <p class="text-gray-400 text-[0.8rem] lg:text-[1rem]">
                                 The recent floods in Noakhali have caused significant damage to homes and
                                 infrastructure. Your
                                 donation will help provide essential supplies to those affected by this disaster. Every
@@ -84,8 +89,8 @@
                                 making a
                                 positive impact on the lives of those in need.
                             </p>
-                            <form class="w-full flex flex-col gap-4">
-                                <input id="donation-noakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                            <form class="w-full flex flex-col gap-4 mt-3 lg:mt-0">
+                                <input id="donation-noakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered text-[0.8rem] lg:text-[1rem] w-full" />
                                 <button id="btn-donate-noakhali" type="submit" class="btn text-[1rem] lg:text-[1.25rem] px-8 py-3 bg-[#B4F461]">Donate</button>
                             </form>
                         </div>
@@ -106,15 +111,15 @@
                         </div>
                         <h4 id="feni" class="text-[1rem] lg:text-[1.25rem] font-bold">Donate for Flood Relief in
                             Feni,Bangladesh</h4>
-                        <p class="text-gray-400">The recent floods in Feni have devastated local communities,
+                        <p class="text-gray-400 text-[0.8rem] lg:text-[1rem]">The recent floods in Feni have devastated local communities,
                             leading to severe disruption and loss. Your generous donation will help provide immediate
                             aid, including food, clean water, and medical supplies, to those affected by this calamity.
                             Together, we can offer crucial support and help rebuild lives in the aftermath of this
                             disaster. Every contribution counts towards making a real difference. Please consider
                             donating today to assist those in urgent need.</p>
 
-                        <form action="" class="w-full flex flex-col gap-4">
-                            <input id="donation-feni" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <form action="" class="w-full flex flex-col gap-4 mt-3 lg:mt-0">
+                            <input id="donation-feni" type="text" placeholder="Write Donation Amount" class="input input-bordered text-[0.8rem] lg:text-[1rem] w-full" />
                             <button id="btn-donate-feni" class="btn text-[1rem] lg:text-[1.25rem] px-8 py-3 bg-[#B4F461]">Donation</button>
                         </form>
                     </div>
@@ -133,7 +138,7 @@
                         </div>
                         <h4 id="quota" class="text-[1rem] lg:text-[1.25rem] font-bold">Aid for Injured in the Quota Movement
                         </h4>
-                        <p class="text-gray-400">The recent Quota movement has resulted in numerous injuries and
+                        <p class="text-gray-400 text-[0.8rem] lg:text-[1rem]">The recent Quota movement has resulted in numerous injuries and
                             significant hardship for many individuals. Your support is crucial in providing medical
                             assistance, rehabilitation, and necessary supplies to those affected. By contributing, you
                             help ensure that injured individuals receive the care and support they need during this
@@ -141,8 +146,8 @@
                             aiding in their recovery. Please consider making a donation to support these brave
                             individuals in their time of need.</p>
 
-                        <form action="" class="w-full flex flex-col gap-4">
-                            <input id="donation-quota" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <form action="" class="w-full flex flex-col gap-4 mt-3 lg:mt-0">
+                            <input id="donation-quota" type="text" placeholder="Write Donation Amount" class="input input-bordered text-[0.8rem] lg:text-[1rem] w-full" />
                             <button id="btn-donate-quota" class="btn text-[1rem] lg:text-[1.25rem] px-8 py-3 bg-[#B4F461]">Donation</button>
                         </form>
                     </div>
