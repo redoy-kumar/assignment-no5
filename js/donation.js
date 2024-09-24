@@ -4,6 +4,14 @@ document.getElementById('btn-donation').addEventListener('click',function(){
     const donation = document.getElementById('donation-section');
     donation.classList.remove('hidden');
     history.classList.add('hidden');
+
+     // Toggle button styles
+     this.classList.add('bg-[#B4F461]');
+     this.classList.remove('bg-white', 'border-gray-300');
+ 
+     const btnHistory = document.getElementById('btn-history');
+     btnHistory.classList.remove('bg-[#B4F461]');
+     btnHistory.classList.add('bg-white', 'border-gray-300');  
 })
 
 
@@ -13,14 +21,14 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     const value = parseFloat(donationValue('donation-noakhali'));
     console.log(value);
     if(isNaN(value) || value<0){
-        return alert('Invalid donation amount! Please try again');
+        return alert('Invalid donation amount! Please try again.');
     }
 
     let balanceNoakhali = parseFloat(donationBalance('donate-balance-noakhali'));
     let balanceMain = parseFloat(donationBalance('main-balance'));
 
     if(balanceMain<value){
-        return alert('Invalid donation amount! Please try again');
+        return alert('Insufficient balance to donate! Please try again.');
     }
 
     showStatus();
@@ -39,14 +47,14 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
     const value = parseFloat(donationValue('donation-feni'));
    
     if(isNaN(value) || value<0){
-        return alert('Invalid donation amount! Please try again');
+        return alert('Invalid donation amount! Please try again.');
     }
 
     let balanceFeni = parseFloat(donationBalance('donate-balance-feni'));
     let balanceMain = parseFloat(donationBalance('main-balance'));
 
     if(balanceMain<value){
-        return alert('Invalid donation amount! Please try again');
+        return alert('Insufficient balance to donate! Please try again.');
     }
 
     showStatus();
@@ -64,14 +72,14 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
     const value = parseFloat(donationValue('donation-quota'));
     console.log(value);
     if(isNaN(value) || value<0){
-        return alert('Invalid donation amount! Please try again');
+        return alert('Invalid donation amount! Please try again.');
     }
 
     let balanceQuota = parseFloat(donationBalance('donate-balance-quota'));
     let balanceMain = parseFloat(donationBalance('main-balance'));
 
     if(balanceMain<value){
-        return alert('Invalid donation amount! Please try again');
+        return alert('Insufficient balance to donate! Please try again.');
     }
 
     showStatus();

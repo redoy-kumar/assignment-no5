@@ -4,6 +4,13 @@ document.getElementById('btn-history').addEventListener('click',function(){
     donation.classList.add('hidden');
     history.classList.remove('hidden');
 
+
+    this.classList.add('bg-[#B4F461]');
+    this.classList.remove('bg-white', 'border-gray-300');
+
+    const btnDonation = document.getElementById('btn-donation');
+    btnDonation.classList.remove('bg-[#B4F461]'); 
+    btnDonation.classList.add('bg-white', 'border-gray-300');  
 })
 
 // Added history
@@ -12,9 +19,9 @@ function history(donation , place){
     const date = new Date();
     div.innerHTML = `
         <div class="border-2 border-solid border-gray-200 rounded-lg p-8 mb-6">
-            <h3 class="text-[1.25rem] font-bold">${donation} Taka is donated for ${place}</h3> 
+            <h3 class="text-[0.9rem] lg:text-[1.25rem] font-bold">${donation} Taka is donated for ${place}</h3> 
             <br>
-            <p class="text-gray-400">Date: ${date}</p>       
+            <p class="text-[0.9rem] lg:text-[1.25rem] text-gray-500">Date: ${date}</p>       
         </div>    
     `
 
