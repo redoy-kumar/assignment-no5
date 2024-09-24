@@ -1,6 +1,14 @@
 // Function that return input value
 function donationValue(id) {
-    return document.getElementById(id).value;
+    const value = document.getElementById(id).value;
+
+    if(isNaN(value)){
+        return false;
+    }
+    else{
+        const intValue = parseInt(value);
+         return intValue;
+    }
 }
 
 // Function that return innerText

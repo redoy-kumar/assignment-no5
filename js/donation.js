@@ -18,77 +18,86 @@ document.getElementById('btn-donation').addEventListener('click',function(){
 // Noakhali
 document.getElementById('btn-donate-noakhali').addEventListener('click', function (event) {
     event.preventDefault();
-    const value = parseFloat(donationValue('donation-noakhali'));
-    console.log(value);
-    if(isNaN(value) || value<0){
+    const input = donationValue('donation-noakhali');
+
+    if(input<0){
+        return alert('Invalid donation amount! Please try again.');
+    }
+    else if(input===false){
         return alert('Invalid donation amount! Please try again.');
     }
 
-    let balanceNoakhali = parseFloat(donationBalance('donate-balance-noakhali'));
-    let balanceMain = parseFloat(donationBalance('main-balance'));
+    let balanceNoakhali = parseInt(donationBalance('donate-balance-noakhali'));
+    let balanceMain = parseInt(donationBalance('main-balance'));
 
-    if(balanceMain<value){
+    if(balanceMain<input){
         return alert('Insufficient balance to donate! Please try again.');
     }
 
     showStatus();
     
-    setBalance('main-balance', balanceMain-value);
-    setBalance('donate-balance-noakhali', balanceNoakhali+value);
+    setBalance('main-balance', balanceMain-input);
+    setBalance('donate-balance-noakhali', balanceNoakhali+input);
 
     const place = document.getElementById('noakhali').innerText;
-    history(value,place);
+    history(input,place);
 });
 
 // Feni
 document.getElementById('btn-donate-feni').addEventListener('click', function (event) {
     event.preventDefault();
 
-    const value = parseFloat(donationValue('donation-feni'));
-   
-    if(isNaN(value) || value<0){
+    const input = donationValue('donation-feni');
+
+    if(input<0){
+        return alert('Invalid donation amount! Please try again.');
+    }
+    else if(input===false){
         return alert('Invalid donation amount! Please try again.');
     }
 
-    let balanceFeni = parseFloat(donationBalance('donate-balance-feni'));
-    let balanceMain = parseFloat(donationBalance('main-balance'));
+    let balanceFeni = parseInt(donationBalance('donate-balance-feni'));
+    let balanceMain = parseInt(donationBalance('main-balance'));
 
-    if(balanceMain<value){
+    if(balanceMain<input){
         return alert('Insufficient balance to donate! Please try again.');
     }
 
     showStatus();
 
-    setBalance('main-balance', balanceMain-value);
-    setBalance('donate-balance-feni', balanceFeni+value);
+    setBalance('main-balance', balanceMain-input);
+    setBalance('donate-balance-feni', balanceFeni+input);
 
     const place = document.getElementById('feni').innerText
-    history(value,place);
+    history(input,place);
 });
 
 // Quota
 document.getElementById('btn-donate-quota').addEventListener('click', function (event) {
     event.preventDefault();
-    const value = parseFloat(donationValue('donation-quota'));
-    console.log(value);
-    if(isNaN(value) || value<0){
+    const input = donationValue('donation-quota');
+    
+    if(input<0){
+        return alert('Invalid donation amount! Please try again.');
+    }
+    else if(input===false){
         return alert('Invalid donation amount! Please try again.');
     }
 
-    let balanceQuota = parseFloat(donationBalance('donate-balance-quota'));
-    let balanceMain = parseFloat(donationBalance('main-balance'));
+    let balanceQuota = parseInt(donationBalance('donate-balance-quota'));
+    let balanceMain = parseInt(donationBalance('main-balance'));
 
-    if(balanceMain<value){
+    if(balanceMain<input){
         return alert('Insufficient balance to donate! Please try again.');
     }
 
     showStatus();
     
-    setBalance('main-balance', balanceMain-value);
-    setBalance('donate-balance-quota', balanceQuota+value);
+    setBalance('main-balance', balanceMain-input);
+    setBalance('donate-balance-quota', balanceQuota+input);
 
     const place = document.getElementById('quota').innerText;
-    history(value,place);
+    history(input,place);
 });
 
 
