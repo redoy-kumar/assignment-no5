@@ -5,6 +5,9 @@ function donationValue(id) {
     if(isNaN(value)){
         return false;
     }
+    else if(value===''){
+        return false;
+    }
     else{
         const intValue = parseInt(value);
          return intValue;
