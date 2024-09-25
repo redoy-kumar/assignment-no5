@@ -39,6 +39,8 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     setBalance('main-balance', balanceMain-input);
     setBalance('donate-balance-noakhali', balanceNoakhali+input);
 
+    document.getElementById('donation-noakhali').value = "";
+
     const place = document.getElementById('noakhali').innerText;
     history(input,place);
 });
@@ -67,6 +69,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
 
     setBalance('main-balance', balanceMain-input);
     setBalance('donate-balance-feni', balanceFeni+input);
+    document.getElementById('donation-feni').value = "";
 
     const place = document.getElementById('feni').innerText
     history(input,place);
@@ -95,6 +98,7 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
     
     setBalance('main-balance', balanceMain-input);
     setBalance('donate-balance-quota', balanceQuota+input);
+    document.getElementById('donation-quota').value = "";
 
     const place = document.getElementById('quota').innerText;
     history(input,place);
